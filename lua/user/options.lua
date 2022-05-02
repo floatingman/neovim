@@ -1,8 +1,6 @@
 local g = vim.g
 
 
-g.python_host_prog = "~/.pyenv/versions/py2nvim/bin/python"
-g.python3_host_prog = "~/.pyenv/versions/py3nvim/bin/python"
 
 
 local options = {
@@ -23,7 +21,7 @@ local options = {
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
-  -- termguicolors = true,                    -- set term gui colors (most terminals support this)
+  termguicolors = true,                    -- set term gui colors (most terminals support this)
   timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
@@ -33,6 +31,7 @@ local options = {
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
+  laststatus = 3,
   relativenumber = false,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
@@ -41,7 +40,11 @@ local options = {
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
-
+g.python_host_prog = "~/.pyenv/versions/py2nvim/bin/python"
+g.python3_host_prog = "~/.pyenv/versions/py3nvim/bin/python"
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+vim.opt.fillchars.eob = " "
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
