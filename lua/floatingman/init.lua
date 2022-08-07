@@ -1,4 +1,5 @@
 require("floatingman.set")
+require("floatingman.packer")
 
 local augroup = vim.api.nvim_create_augroup
 FloatingmanGroup = augroup('Floatingman', {})
