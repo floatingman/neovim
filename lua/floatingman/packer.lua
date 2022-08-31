@@ -16,6 +16,8 @@ return require("packer").startup(function()
     use("nvim-lua/plenary.nvim")
     use("nvim-lua/popup.nvim")
     use("nvim-telescope/telescope.nvim")
+    use("nvim-telescope/telescope-file-browser.nvim")
+    use("nvim-telescope/telescope-fzy-native.nvim")
 
     -- All the things
     use("neovim/nvim-lspconfig")
@@ -51,6 +53,8 @@ return require("packer").startup(function()
     use("rcarriga/nvim-dap-ui")
     use("theHamsta/nvim-dap-virtual-text")
 
+    -- Commenting out code made easy
+    use("tpope/vim-commentary")
 	--[[
     --
 	-- Lazy loading:

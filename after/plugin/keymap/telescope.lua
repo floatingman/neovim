@@ -48,7 +48,6 @@ end)
 nnoremap("<leader>td", function()
     require('floatingman.telescope').dev()
 end)
-
-
-
-
+nnoremap("<leader>fb", function()
+    require('telescope').extensions.file_browser.file_browser()
+end)
