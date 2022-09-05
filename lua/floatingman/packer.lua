@@ -19,6 +19,12 @@ return require("packer").startup(function()
     use("nvim-telescope/telescope-file-browser.nvim")
     use("nvim-telescope/telescope-fzy-native.nvim")
 
+    use({
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    })
+
+
     -- All the things
     use("neovim/nvim-lspconfig")
     use("hrsh7th/cmp-nvim-lsp")
@@ -55,7 +61,10 @@ return require("packer").startup(function()
 
     -- Commenting out code made easy
     use("tpope/vim-commentary")
-	--[[
+
+    -- Run Unix commands from vim
+    use("tpope/vim-eunuch")
+    --[[
     --
 	-- Lazy loading:
 	-- Load on specific commands
